@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+     <!--link bootstrap-->
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.css"/>
+
+     <!--CSS propio-->    
+ 
+     <!-- JS Jquery-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.js"></script>
+ 
+     <title>FIN DEL JUEGO</title>
+</head>
+<body>
+     <div class="container">
+          <div class="row">
+               <h1 class="text-center text-success bg-warning mt-4 mb-4">ORO NINJA!!</h1>
+          </div>
+          <div class="card col-md-4 border-success text-center">
+               <div class="card-head">
+                    <h1 class="text-success">FELICITACIONES!!</h1>
+               </div>
+               <div class="card-body">
+                    <p>tu juego ha terminado :(</p>
+                    <p>has ganado {{request.session.oro_total}} monedas de oro</p>
+                    <p>y has jugado {{request.session.turnos}} turnos</p>
+               </div>
+               <div class="card-footer">
+                    
+                    <!-- <h2>¡Hasta la próxima!</h2> -->
+               </div>
+               <a href="{% url 'play_again' %}"><h2>¡Hasta la próxima!</h2></a>
+          </div>
+     </div>
+
+     
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.js"></script>
+</body>
+</html>
